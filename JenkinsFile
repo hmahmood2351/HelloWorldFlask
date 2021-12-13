@@ -4,6 +4,8 @@ pipeline{
             stage('Build'){
                 steps{
                     sh "echo this is where the building happens"
+                    sh "echo cloning repo"
+                    sh "echo building docker images"
                 }
             }
             stage('Test'){
@@ -14,6 +16,8 @@ pipeline{
             stage('Deployment'){
                 steps{
                     sh "echo this is where the deployment happens"
+                    sh "echo pushing up to dockerhub"
+                    sh "echo running a cmd that triggers a rolling update on the docker swarm manager, pushing it to workers"
                 }
             }
         }
