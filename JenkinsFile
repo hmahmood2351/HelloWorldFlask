@@ -5,6 +5,8 @@ pipeline{
                 steps{
                     sh "echo this is where the building happens"
                     sh "echo cloning repo"
+                    sh ls 
+                    sh pwd
                     sh "echo building docker images"
                 }
             }
