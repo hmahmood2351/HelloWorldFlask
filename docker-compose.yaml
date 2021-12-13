@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  flaskhello-application:
+    image: hmahmood2351/helloworldflask
+    ports:
+    - target: 5000
+      published: 80
+      protocol: tcp
