@@ -25,6 +25,7 @@ pipeline{
                     sh "echo this is where the testing happens"
                 }
             }
+
             stage('Deployment'){
                 steps{
                     sh "echo this is where the deployment happens"
@@ -32,9 +33,11 @@ pipeline{
                     sh "echo logging into dockerhub"
                     sh "sudo docker login -u ${CREDS_USR} -p ${CREDS_PSW}"
 
-                    sh "echo pushing up to dockerhub"
+                    sh "echo pushing Application image up to dockerhub"
+                    sh "sudo docker push hmahmood2351/helloworldflask"
 
                     sh "echo logging out of dockerhub"
+                    sh "sudo docker logout"
 
                     sh "echo running a cmd that triggers a rolling update on the docker swarm manager, pushing it to workers"
                 }
