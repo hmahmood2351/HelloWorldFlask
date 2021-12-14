@@ -4,9 +4,9 @@ pipeline{
             stage('Build'){
                 steps{
                     sh "echo this is where the building happens"
+                    sh "cat README.md"
                     sh "echo cloning repo"
-                    sh ls 
-                    sh pwd
+                    // sh "git clone https://github.com/hmahmood2351/HelloWorldFlask"
                     sh "echo building docker images"
                 }
             }
