@@ -4,8 +4,6 @@ pipeline{
         environment {
         //CREDS_USR for docker user, CREDS_PSW for docker pass
         CREDS = credentials("dockerhubimageid")
-        MANAGER = credentials("SwarmManagerNodeSSH")
-        MANAGERIP = "20.115.120.105"
         }
         
         stages{
@@ -41,14 +39,13 @@ pipeline{
                     sh "echo logging out of dockerhub"
                     sh "sudo docker logout"
 
-                    sh "echo sshing into swarm MANAGER node."
+                    sh "echo finished - next job running subsequently pulls and deploys from latest dockercompose"
 
-                    sshagent(credentials: ['SwarmManagerNodeSSH']) {
-                    }
+                    // sh "echo sshing into swarm MANAGER node."
 
-                    sh "echo cloning latest docker-compose.yaml from HelloFlaskApp repo"
-                    sh "echo running docker stack deploy with the compose file - running or updating application"
-                    sh "echo terminating ssh session"
+                    // sh "echo cloning latest docker-compose.yaml from HelloFlaskApp repo"
+                    // sh "echo running docker stack deploy with the compose file - running or updating application"
+                    // sh "echo terminating ssh session"
                 }
             }
         }
