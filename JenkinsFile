@@ -5,7 +5,7 @@ pipeline{
                 steps{
                     sh "echo this is where the building happens"
                     sh "cat README.md"
-                    sh "ls -al"
+                    sh "ls -al; pwd"
                     sh "echo cloning repo"
                     // sh "git clone https://github.com/hmahmood2351/HelloWorldFlask"
                     sh "echo building docker images"
