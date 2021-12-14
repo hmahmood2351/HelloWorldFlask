@@ -2,14 +2,13 @@ pipeline{
         agent any
         
         environment {
-        withCredentials([usernamePassword(credentialsId: 'dockerhubimageid', usernameVariable: 'dockeruser', passwordVariable: 'dockerpass')]) {
-          // available as an env variable, but will be masked if you try to print it out any which way
-          // note: single quotes prevent Groovy interpolation; expansion is by Bourne Shell, which is what you want
-          sh 'echo $dockerpass'
-          // also available as a Groovy variable
-          echo dockerpass
-          // or inside double quotes for string interpolation
-          echo "username is $dockeruser"
+        /*
+        * Uses a Jenkins credential called "FOOCredentials" and creates environment variables:
+        * "$FOO" will contain string "USR:PSW"
+        * "$FOO_USR" will contain string for Username
+        * "$FOO_PSW" will contain string for Password
+        */
+        FOO = credentials("dockerhubimageid")
         }
         
         }
@@ -23,7 +22,7 @@ pipeline{
                     // sh "git clone https://github.com/hmahmood2351/HelloWorldFlask" - not needed, already in my repo
                     sh "echo building docker image - application"
                     sh "sudo docker build -t hmahmood2351/helloworldflask /var/lib/jenkins/workspace/testjob/Application/"
-                    sh "echo dockeruser; echo dockerpass"
+                    sh "echo $FOO_USR; echo $FOO_PSW"
                 }
             }
             stage('Test'){
