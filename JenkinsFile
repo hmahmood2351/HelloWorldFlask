@@ -7,7 +7,7 @@ pipeline{
                     sh "cat README.md"
                     sh "ls -al; pwd"
                     sh "echo cloning repo"
-                    // sh "git clone https://github.com/hmahmood2351/HelloWorldFlask"
+                    // sh "git clone https://github.com/hmahmood2351/HelloWorldFlask" - not needed, already in my repo
                     sh "echo building docker images"
                 }
             }
