@@ -16,7 +16,7 @@ pipeline{
                     // sh "git clone https://github.com/hmahmood2351/HelloWorldFlask" - not needed, already in my repo
                     sh "echo building docker image - application"
                     sh "sudo docker build -t hmahmood2351/helloworldflask /var/lib/jenkins/workspace/testjob/Application/"
-                    sh "echo $CREDS_USR; echo $CREDS_PSW"
+                    sh "echo ${CREDS_USR}; echo ${CREDS_PSW}"
                 }
             }
 
