@@ -44,7 +44,6 @@ pipeline{
                     sh "echo sshing into swarm MANAGER node."
 
                     sshagent(credentials: ['SwarmManagerNodeSSH']) {
-                        sh "ssh -i . azureuser@"
                     }
 
                     sh "echo cloning latest docker-compose.yaml from HelloFlaskApp repo"
