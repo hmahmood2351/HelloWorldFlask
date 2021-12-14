@@ -30,12 +30,12 @@ pipeline{
                     sh "echo this is where the deployment happens"
 
                     sh "echo logging into dockerhub"
-                    sh "docker login -u ${CREDS_USR} -p ${CREDS_PSW}"
+                    sh "sudo docker login -u ${CREDS_USR} -p ${CREDS_PSW}"
 
                     sh "echo pushing up to dockerhub"
 
                     sh "echo logging out of dockerhub"
-                    
+
                     sh "echo running a cmd that triggers a rolling update on the docker swarm manager, pushing it to workers"
                 }
             }
