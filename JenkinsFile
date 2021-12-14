@@ -9,7 +9,7 @@ pipeline{
                     sh "echo cloning repo"
                     // sh "git clone https://github.com/hmahmood2351/HelloWorldFlask" - not needed, already in my repo
                     sh "echo building docker image - application"
-                    sh "sudo docker build -t hmahmood2351/helloworldflask /var/lib/jenkins/workspace/testjob/Application/"
+                    sh "sudo -S docker build -t hmahmood2351/helloworldflask /var/lib/jenkins/workspace/testjob/Application/"
                 }
             }
             stage('Test'){
