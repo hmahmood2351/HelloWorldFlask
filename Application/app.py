@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_internet():
-    return "Hello New Image!"
+    return "Hello Automated Deployment!"
 
 if __name__=='__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
