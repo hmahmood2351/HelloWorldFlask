@@ -2,8 +2,14 @@ pipeline{
         agent any
         
         environment {
-        withCredentials([usernamePassword(credentialsId: 'dockerhubimageid', passwordVariable: 'dockerpass', usernameVariable: 'dockeruser')]) {
-        // allows access to dockeruser and dockerpass variables
+        withCredentials([usernamePassword(credentialsId: 'dockerhubimageid', usernameVariable: 'dockeruser', passwordVariable: 'dockerpass')]) {
+          // available as an env variable, but will be masked if you try to print it out any which way
+          // note: single quotes prevent Groovy interpolation; expansion is by Bourne Shell, which is what you want
+          sh 'echo $dockerpass'
+          // also available as a Groovy variable
+          echo dockerpass
+          // or inside double quotes for string interpolation
+          echo "username is $dockeruser"
         }
         
         }
