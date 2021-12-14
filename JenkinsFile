@@ -39,7 +39,10 @@ pipeline{
                     sh "echo logging out of dockerhub"
                     sh "sudo docker logout"
 
-                    sh "echo running a cmd that triggers a rolling update on the docker swarm manager, pushing it to workers"
+                    sh "echo sshing into swarm MANAGER node."
+                    sh "echo cloning latest docker-compose.yaml from HelloFlaskApp repo"
+                    sh "echo running docker stack deploy with the compose file - running or updating application"
+                    sh "echo terminating ssh session"
                 }
             }
         }
