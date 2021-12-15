@@ -1,6 +1,7 @@
 version: "3.8"
 services:
   flaskhello-application:
+    container_name: flaskhello
     environment:
       - connectionstring:${connectionstring}
     image: hmahmood2351/helloworldflask
