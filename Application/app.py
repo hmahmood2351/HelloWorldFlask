@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@host/database_name'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://squid:flaskappoctopus@123!@flaskdb.mysql.database.azure.com:3306/appdb'
 db = SQLAlchemy(app)
 
 @app.route('/')
