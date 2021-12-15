@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return f"Hello ARG PAIN! {os.getenv('connectionstring')}"
+    return f"Hello ARG PAINS! {os.getenv('connectionstring')}"
     
     #render_template('index.html') 
     #f"Hello Automated Deployment! This is built originally on {platform.node()}"
