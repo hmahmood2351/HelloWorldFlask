@@ -4,12 +4,12 @@ import os
 
 app = Flask(__name__)
 
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URI")
-#db = SQLAlchemy(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@host/database_name'
+db = SQLAlchemy(app)
 
 @app.route('/')
 def home():
-    return f"Hello PAINNEW13! {os.getenv('connectionstring')}"
+    return f"Hello PAINNEW14! {os.getenv('connectionstring')}"
     
     #render_template('index.html') 
     #f"Hello Automated Deployment! This is built originally on {platform.node()}"
