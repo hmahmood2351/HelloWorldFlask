@@ -5,6 +5,7 @@ WORKDIR /app
 COPY . .
  
 RUN pip install -r requirements.txt
+RUN export connectionstring
 
 EXPOSE 5000
 
