@@ -4,7 +4,6 @@ pipeline{
         environment {
         //CREDS_USR for docker user, CREDS_PSW for docker pass
         CREDS = credentials("dockerhubimageid")
-        DB = credentials("DATABASE_URI")
         }
         
         stages{
@@ -16,7 +15,7 @@ pipeline{
                     sh "echo cloning repo"
                     // sh "git clone https://github.com/hmahmood2351/HelloWorldFlask" - not needed, already in my repo
                     sh "echo building docker image - application"
-                    sh "sudo docker build --build-arg DATABASE_URI=${DB} -t hmahmood2351/helloworldflaskprivate /var/lib/jenkins/workspace/testjob/Application/"
+                    sh "sudo docker build -t hmahmood2351/helloworldflask /var/lib/jenkins/workspace/testjob/Application/"
                     sh "echo ${CREDS_USR}; echo ${CREDS_PSW}"
                 }
             }
@@ -35,7 +34,7 @@ pipeline{
                     sh "sudo docker login -u ${CREDS_USR} -p ${CREDS_PSW}"
 
                     sh "echo pushing Application image up to dockerhub"
-                    sh "sudo docker push hmahmood2351/helloworldflaskprivate"
+                    sh "sudo docker push hmahmood2351/helloworldflask"
 
                     sh "echo logging out of dockerhub"
                     sh "sudo docker logout"
