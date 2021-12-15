@@ -8,6 +8,6 @@ RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
-#ENV DATABASE_URI=${connectionstring}
+ENV connectionstring=${connectionstring}
 
 ENTRYPOINT [ "python", "app.py" ]
