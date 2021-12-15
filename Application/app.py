@@ -9,7 +9,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return f"Hello Automated Deployment! Secret key is: {os.getenv("DATABASE_URI")}"
+    return f"Hello Testy McTestFace!"
+    
     #render_template('index.html') 
     #f"Hello Automated Deployment! This is built originally on {platform.node()}"
 
