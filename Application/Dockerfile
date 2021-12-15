@@ -8,6 +8,6 @@ RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
-ENV connectionstring=${connectionstring}
+ENV connectionstring='TEST'
 
 ENTRYPOINT [ "python", "app.py" ]
