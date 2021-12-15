@@ -9,6 +9,7 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # ARG DATABASE_URI
-ENV connectionstring=${connectionstring}
+# ENV connectionstring=${connectionstring}
+ENV connectionstring
 
 ENTRYPOINT [ "python", "app.py" ]
