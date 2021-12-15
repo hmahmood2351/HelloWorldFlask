@@ -2,7 +2,7 @@ version: "3.8"
 services:
   flaskhello-application:
     environment:
-      - connectionstring
+      - DATABASE_URI:${connectionstring} 
     image: hmahmood2351/helloworldflask
     ports:
     - target: 5000
