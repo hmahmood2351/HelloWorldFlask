@@ -1,11 +1,16 @@
 from flask import Flask, render_template
-import platform
+from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URI")
+#db = SQLAlchemy(app)
+
 @app.route('/')
 def home():
-    return render_template('index.html') 
+    return f"Hello Automated Deployment! Secret key is: {os.getenv("DATABASE_URI")}"
+    #render_template('index.html') 
     #f"Hello Automated Deployment! This is built originally on {platform.node()}"
 
 if __name__=='__main__':
