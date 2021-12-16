@@ -51,8 +51,13 @@ The DockerFile takes a few steps that ensures that the application has what it n
 
 The Docker-Compose file works by pulling the latest application image from DockerHub and publishes the port 80 and maps that to 5000 on the container. This is used so that the Docker Swarm Manager node can use Docker Stack to deploy the application using the Docker-Compose file, aiding in the continuous deployment process.
 
+## The Process
+
+
+
 ## The Pipeline
 
+The place where the CI/CD process happens.
 
 A technical description of how the pipeline works.
     A report on the success and code coverage of your unit tests.
