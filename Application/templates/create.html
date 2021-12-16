@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<P><a href="{{ url_for('home') }}">Go back</a> </P>
+
+<h3>CREATE fuctionality.</h3>
+
+<p>Add a service.</p>
+
+<body>
+    <div class='form'>
+        <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+            {{ form.servicename.label }} {{ form.servicename }}
+            <br>
+            {{ form.company.label }} {{ form.company }}
+            <br>
+            {{ form.isCompromised.label }} {{ form.isCompromised }}
+            <br>
+            {{ form.submit }}
+            <br>
+        {{ message }}
+        </form>
+    </div>
+</body>
+
+<p>Add an intelligence organisation (with a link to the service ID in Service ID).</p>
+
+<body>
+    <div class='form'>
+        <form method='POST' action=''>
+            {{ secondform.hidden_tag() }}
+            {{ secondform.agencyname.label }} {{ secondform.agencyname }}
+            <br>
+            {{ secondform.service_id.label }} {{ secondform.service_id }}
+            <br>
+            {{ secondform.submit }}
+            <br>
+        {{ secondmessage }}
+        </form>
+    </div>
+</body>
+
+{% endblock body %}

@@ -1,1 +1,18 @@
-<h1>This is a test homepage. This is using a quicker building VM.</h1>
+{% extends 'layout.html' %}
+{% block body %}
+<p>Welcome to the homepage for the Warrant Canary application. These are the following options available: </p>
+
+<P><a href="{{ url_for('create') }}">CREATE</a> </P>
+<i>Add Internet services, and any (related) intelligence organisations.</i>
+
+<P><a href="{{ url_for('read') }}">READ</a> </P>
+<i>View all registered Internet services, and all registered intelligence organisations.</i>
+<i>View all services and intelligence organisations that are compromised.</i>
+
+<P><a href="{{ url_for('update') }}">UPDATE</a> </P>
+<i>Update records in the services and intelligence organisations database, based on ID.</i>
+
+<P><a href="{{ url_for('delete') }}">DELETE</a> </P>
+<i>Delete records in the services and intelligence organisations database, based on ID.</i>
+
+{% endblock body %}
