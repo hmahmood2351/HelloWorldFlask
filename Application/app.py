@@ -200,14 +200,14 @@ def delete():
 
         if deleteform.validate_on_submit():
 
-            currentservice = Services.query.get(int(serviceid))
+            currentservice = Services.query.get(serviceid)
             db.session.delete(currentservice)
             db.session.commit()
 
             deletemessage="Successfully deleted."
         
         if deletesecondform.validate_on_submit():
-            currentagency = Agencies.query.get(int(agencyid))
+            currentagency = Agencies.query.get(agencyid)
             db.session.delete(currentagency)
             db.session.commit()
 
@@ -215,6 +215,8 @@ def delete():
 
     return render_template('delete.html', deleteform=deleteform, deletemessage=deletemessage, deletesecondform=deletesecondform, deletesecondmessage=deletesecondmessage) 
     
+
+
 ###                                ######################
 
 
