@@ -27,12 +27,23 @@ At the time of writing the application and the process of development as a whole
 
 **Continuous Integration and Deployment (CI/CD)** - my CI/CD pipeline currently works only on my main branch. Any features that I test locally are merged into main. The continuous deployment part was essential in ensuring that there was a smooth process from me pushing up my code up into main, and then new containers being built, images being pushed into DockerHub, and then deployed to my Docker Swarm setup. This resulted in me having the ability to see changes instantly with my setup, and lessened time spent on menial building and bringing up infrastructures.
 
-    Cloud Fundamentals
-    Containerisation
+**Cloud Fundamentals** - Since I had my Jenkins VM and Swarm Nodes up in the cloud, I needed to know how a certain cloud provider (I'm using Azure) worked and the basics of how to deploy resources, deal with basic networking (IPs and open ports), and administration of my resources into resource groups. 
 
+**Containerisation** - By containerising my application using Docker I was able to deploy it and have it run fairly quickly, regardless of the environment I was running it on. It allowed me to only have those libraries that I only needed, and hence kept resource usage down when building and deploying images. I used a public DockerHub repo.
 
-   An explanation of your app and how it fulfils the brief.
-A technical description of how the application works.
+## The Application with technical details
+
+The application itself, is written in Python. It's divided into several sections:
+
+**Imports** - These were required so that the application, with all of the functions and classes that are being called, are able to access them. Since I didn't have enough time to split up my application into separate portions, there's a fair amount of them at the top.
+**Initialisation** - This was necessary, in order to instantiate the Flask object, configure the database URI, change the SQLALCHEMY_TRACK_MODIFICATIONS and configure the SECRET_KEY for the form, as well as instantiating the database object. Without these, the Flask application wouldn't exist, as well as the database object, and having a connection to the (actual) remote database.
+**Database Layer Schema** - The way SQLAlchemy works is that I can use Python code, in the form of classes and attributes, to be able to define what my SQL database looks like. This was achieved for the Services and the Agencies tables, which all have their own columns (as class attributes in Python). The Agencies table has a foreign key, referring to the Services primary key.
+**Defining Forms** - These were defined using Python OOP as well, and were to be used on the majority of the routes within the website. They allow for a user to input in data, and have that then translated into the program. Validators are used to check the inputs. Most of the fields are based on StringFields.
+**Defining Routes** - Are what allow the user to navigate around the website. Through the help of url_for(), I was able to then use these to mimic what a real website would be looking like in terms of navigation. There are a total of five different routes within the web application. Some require the POST HTTP method in order for data to get through, as it is disabled by default. Each route has its own programming to give its functionality within it.
+**Runtime** - The actual step of running the application, allowing it to be run on the Flask default of 5000.
+
+The 
+
 
 A technical description of how the pipeline works.
     A report on the success and code coverage of your unit tests.
