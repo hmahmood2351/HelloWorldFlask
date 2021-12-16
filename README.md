@@ -49,7 +49,9 @@ The application itself, is written in Python. It's divided into several sections
 
 The DockerFile takes a few steps that ensures that the application has what it needs as a container. It ensures that Python is available, and copies all of the necessary files it needs (in the same directory as the DockerFile is based), does a pip install -r requirements to ensure that Python has all the modules it needs to work the application, exposes the port 5000 outside of the container, and makes python app.py run every time the container is run, which results in the application running.
 
-The Docker-Compose file works by pulling the latest application image from DockerHub and publishes the port 80 and maps that to 5000 on the container. This is used so that the Docker Swarm Manager node can use Docker Stack to deploy the application using the Docker-Compose file 
+The Docker-Compose file works by pulling the latest application image from DockerHub and publishes the port 80 and maps that to 5000 on the container. This is used so that the Docker Swarm Manager node can use Docker Stack to deploy the application using the Docker-Compose file, aiding in the continuous deployment process.
+
+## The Pipeline
 
 
 A technical description of how the pipeline works.
