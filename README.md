@@ -1,5 +1,5 @@
 # HelloWorldFlask
-Basic flask app for hello world
+Flask Project - Warrant Canary System
 
 ## The Application
 
