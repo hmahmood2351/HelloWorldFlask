@@ -5,6 +5,20 @@
 
 <h3>READ fuctionality.</h3>
 
+<h4>All entries in databases:</h4>
 
+<h4>Service ID : Service Name : Company : IsCompromised (0=No/1=Yes) </h4>
+
+{% for service in servicelist %}
+<p>{{ service }}</p>
+{% endfor %}
+
+<h4>All services that are compromised, and their respective intelligence organisations</h4>
+
+<h4>Agency ID : Agency Name : Service ID </h4>
+
+{% for agency in agencylist %}
+<p>{{ agency }}</p>
+{% endfor %}
 
 {% endblock body %}

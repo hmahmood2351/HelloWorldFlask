@@ -5,6 +5,35 @@
 
 <h3>DELETE fuctionality.</h3>
 
+<p>Delete a service.</p>
+
+<body>
+    <div class='form'>
+        <form method='POST' action=''>
+            {{ deleteform.hidden_tag() }}
+            {{ deleteform.serviceid.label }} {{ deleteform.servicename }}
+            <br>
+            {{ deleteform.submit }}
+            <br>
+        {{ deletemessage }}
+        </form>
+    </div>
+</body>
+
+<p>Delete an intelligence organisation record, based off Agency ID.</p>
+
+<body>
+    <div class='form'>
+        <form method='POST' action=''>
+            {{ deletesecondform.hidden_tag() }}
+            {{ deletesecondform.agencyid.label }} {{ deletesecondform.agencyname }}
+            <br>
+            {{ deletesecondform.submit }}
+            <br>
+        {{ deletesecondmessage }}
+        </form>
+    </div>
+</body>
 
 
 {% endblock body %}

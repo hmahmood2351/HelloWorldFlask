@@ -17,7 +17,12 @@ from app import db, Services, Agencies
 # db.session.add(testagency2)
 # db.session.commit()
 
-x = Services.query.get(1)
+serviceid = 1
+x = Services.query.get(int(serviceid))
+print(x.servicename, x.company, x.isCompromised)
+x.servicename = "Facebook"
+x.company = "Meta"
+db.session.commit()
 y = Agencies.query.filter_by(service_id=1).first()
 z = Services.query.get(1).id
 print(y, type(y))

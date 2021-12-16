@@ -5,6 +5,45 @@
 
 <h3>UPDATE fuctionality.</h3>
 
+<p>Modify a service, based off Service ID.</p>
+
+<body>
+    <div class='form'>
+        <form method='POST' action=''>
+            {{ updateform.hidden_tag() }}
+            {{ updateform.serviceid.label }} {{ updateform.servicename }}
+            <br>
+            {{ updateform.servicename.label }} {{ updateform.servicename }}
+            <br>
+            {{ updateform.company.label }} {{ updateform.company }}
+            <br>
+            {{ updateform.isCompromised.label }} {{ updateform.isCompromised }}
+            <br>
+            {{ updateform.submit }}
+            <br>
+        {{ updatemessage }}
+        </form>
+    </div>
+</body>
+
+<p>Modify an intelligence organisation record, based off Agency ID.</p>
+
+<body>
+    <div class='form'>
+        <form method='POST' action=''>
+            {{ updatesecondform.hidden_tag() }}
+            {{ updatesecondform.agencyid.label }} {{ updatesecondform.agencyname }}
+            <br>
+            {{ updatesecondform.agencyname.label }} {{ updatesecondform.agencyname }}
+            <br>
+            {{ updatesecondform.service_id.label }} {{ updatesecondform.service_id }}
+            <br>
+            {{ updatesecondform.submit }}
+            <br>
+        {{ updatesecondmessage }}
+        </form>
+    </div>
+</body>
 
 
 {% endblock body %}
