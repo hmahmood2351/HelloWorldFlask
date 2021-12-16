@@ -11,12 +11,15 @@ The user starts off at the homepage. They're able to access each of the pages fr
 
 At the time of writing the application and the process of development as a whole implements the following technologies:
 
-Project Management - Jira is used to map out the development process, through the use of an Agile methodology. With sprints, tracking issues, working on the backlog, daily standup meetings, and other activities within the development cycle, I was able to get a rough approximation of where we're headed, issues that we might be facing and prioritisation in terms of tasks. Since this was a single project, I had less informal Scrum Poker sessions by looking at what I had to do, the time it might take, and what I had done.
+**Project Management** - Jira is used to map out the development process, through the use of an Agile methodology. With sprints, tracking issues, working on the backlog, daily standup meetings, and other activities within the development cycle, I was able to get a rough approximation of where we're headed, issues that we might be facing and prioritisation in terms of tasks. Since this was a single project, I had less informal Scrum Poker sessions by looking at what I had to do, the time it might take, and what I had done.
 
-Python Fundamentals    
-    Python Testing
-    Git
-    Linux
+**Python Fundamentals** - Since Python was used for the majority of the project, and was used to instantiate the Flask application, model out the database schema, program the routes, and all of the other tasks associated with development in general. It required a level of knowledge up to OOP. Being able to understand how classes, objects, methods, and decorators work.  
+
+**Python Testing** - Due to time constraints, I didn't get as much time to be programming tests in Python. Therefore, the implementation of testing is quite limited and is only limited to ensuring that the homepage loads successfully.
+    
+**Git** - Git was an essential part of the project.
+  
+  Linux
     Python Web Development
     Databases
     Continuous Integration and Deployment (CI/CD)
