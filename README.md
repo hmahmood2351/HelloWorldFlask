@@ -17,12 +17,16 @@ At the time of writing the application and the process of development as a whole
 
 **Python Testing** - Due to time constraints, I didn't get as much time to be programming tests in Python. Therefore, the implementation of testing is quite limited and is only limited to ensuring that the homepage loads successfully.
     
-**Git** - Git was an essential part of the project.
+**Git** - Git was an essential part of the project. It allowed me to stage, push, pull, and branch during the project. The GitHub platform allowed me to have my code and all files hosted on a repository, to be pulled and used from anywhere. My JenkinsFile, Docker-Compose, and application are all in the repository. I have a dev branch for whenever I want to test features locally. I can do a pull request to merge those changes from the dev branch to main.
   
-  Linux
-    Python Web Development
-    Databases
-    Continuous Integration and Deployment (CI/CD)
+**Linux** - Linux was needed as a lightweight base for my containers to be running Python on. It was also needed for the various infrastructure components of my project, such as the Jenkins VM and Swarm Nodes. I needed to have a certain level of knowledge about Linux - installing applications, navigating around, using SSH, using Docker, Jenkins, and networking. 
+   
+**Python Web Development** - This was specifically achieved with Flask, a library which allowed me to quickly have a backend ready and able to handle routes and templating, which formed the backbone of my application. Extensions were used with Flask which provided features such as having forms on pages, and for interacting with SQL databases programatically. 
+
+**Databases** - I experimented with the inbuilt sqlite database, a local MySQL server, and then eventually picked up Azure SQL Database. It suited my needs, and I was able to initiate connections, define the schema, and conduct CRUD operations within my Flask application.
+
+**Continuous Integration and Deployment (CI/CD)** - my CI/CD pipeline currently works only on my main branch. Any features that I test locally are merged into main. The continuous deployment part was essential in ensuring that there was a smooth process from me pushing up my code up into main, and then new containers being built, images being pushed into DockerHub, and then deployed to my Docker Swarm setup. This resulted in me having the ability to see changes instantly with my setup, and lessened time spent on menial building and bringing up infrastructures.
+
     Cloud Fundamentals
     Containerisation
 
