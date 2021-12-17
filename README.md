@@ -56,9 +56,13 @@ The Docker-Compose file works by pulling the latest application image from Docke
 The place where the CI/CD process happens. From start to finish, these are the stages involved along with an accompanying diagram.
 
 **Submitting Code to VCS** = the first stage, composed of me submitting my code to main or to the developer branch. I manually do a pull request with main whenever I want those changes to be made to my program.
+
 **Testing the program** - didn't get around to implementing this in the CI/CD pipeline, but I would have a separate stage in the JenkinsFile where testing happens.
+
 **Building the Docker image** - building the Docker image based on the latest code is needed so that those changes are enacted in the application.
+
 **Deploying to DockerHub** - I then want that container available to be pulled from everywhere, so my Docker-Compose file uses a remote image in order to build.
+
 **Reinitialising Docker Swarm setup.** - After pulling the latest image on the Docker Swarm Manager node, I want the application to be run or updated through Docker Stack deploy.
 
 Pipeline diagram:
