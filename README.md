@@ -95,5 +95,4 @@ I also had some issues with getting databases to work. It seems that the more co
 
 I faced issues in the whole build agent and deployment process, and was consistently going through a trial-error process. I don't have the prerequisite knowledge to build and tear down my deployment environment so the CI/CD pipeline works on the presumption that there's an environment for it to deploy to, namely only a Swarm Manager node. This would've saved me a large amount of time in installing and setting up my machines.
 
-Practicing Jenkins and CI/CD more would've lead to a better outcome for this project. I only managed to get the application worked on the last day. The majority of that time was spent on figuring out how I could put a basic Hello World Flask application and continually deploy it to a Cloud infrastructure. Hence the name of the repo.
-
+Practicing Jenkins and CI/CD more would've lead to a better outcome for this project. I only managed to get the application worked on the last day. The majority of that time was spent on figuring out how I could put a basic Hello World Flask application and continually deploy it to a Cloud infrastructure. Hence the name of the repo. I could've also figured out how to use CI with Github Actions. 
