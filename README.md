@@ -62,17 +62,21 @@ The place where the CI/CD process happens. From start to finish, these are the s
 **Reinitialising Docker Swarm setup.** - After pulling the latest image on the Docker Swarm Manager node, I want the application to be run or updated through Docker Stack deploy.
 
 Pipeline diagram:
+
 ![image](https://user-images.githubusercontent.com/44241991/146505260-a650ed3c-5710-4013-9ca4-ffaefbf03cfb.png)
 
 Infrastructure Diagram:
+
 ![image](https://user-images.githubusercontent.com/44241991/146505931-93503128-128a-40d1-8754-db236207dd0f.png)
 
 
 Component-level Diagram:
+
 ![image](https://user-images.githubusercontent.com/44241991/146506439-0ccd37f8-10bb-4294-b279-b0bf3cb2bbbd.png)
 
 
 ERD Diagram: appdb database
+
 ![image](https://user-images.githubusercontent.com/44241991/146507066-0475f13e-b064-4edc-be60-d60ac9dce107.png)
 
 
