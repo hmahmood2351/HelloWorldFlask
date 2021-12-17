@@ -65,8 +65,11 @@ Pipeline diagram:
 ![image](https://user-images.githubusercontent.com/44241991/146505260-a650ed3c-5710-4013-9ca4-ffaefbf03cfb.png)
 
 Infrastructure Diagram:
+![image](https://user-images.githubusercontent.com/44241991/146505931-93503128-128a-40d1-8754-db236207dd0f.png)
+
 
 Component-level Diagram:
+
 
 ERD Diagram: appdb database
 
