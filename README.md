@@ -69,9 +69,23 @@ Infrastructure Diagram:
 
 
 Component-level Diagram:
+![image](https://user-images.githubusercontent.com/44241991/146506439-0ccd37f8-10bb-4294-b279-b0bf3cb2bbbd.png)
 
 
 ERD Diagram: appdb database
+![image](https://user-images.githubusercontent.com/44241991/146507066-0475f13e-b064-4edc-be60-d60ac9dce107.png)
+
 
 
 **Issues and Future Improvements**
+
+I encountered many issues during this project, most notably time and lack of experience in building projects - especially with testing, security and the CI/CD process.
+
+I had a persistent issue of trying to figure out a secure way to have my environmental variables (used for the database connection string) kept secure and not leaked in a code repo or in a DockerHub image. I saw that I was going off on a tangent when researching about different implementations and was forced to cut this part short when dealing with credentials, since I didn't have enough time left. I was last looking at Azure Key Vault and BuildKit. I also tried to use a private repo to avoid any build arguments being leaked, however that didn't seem to pair well with the Docker Swarm nodes. I also looked at having a local registry before moving on.
+
+I also had some issues with getting databases to work. It seems that the more complicated the database gets, the more knowledge you need to have in order to do certain operations. My application doesn't have a complete delete functionality because I didn't know how to do a cascading delete (which I'm 99% sure is the way to go about deleting records with dependencies in another table) since I only covered basic deletions.
+
+I faced issues in the whole build agent and deployment process, and was consistently going through a trial-error process. I don't have the prerequisite knowledge to build and tear down my deployment environment so the CI/CD pipeline works on the presumption that there's an environment for it to deploy to, namely only a Swarm Manager node. This would've saved me a large amount of time in installing and setting up my machines.
+
+Practicing Jenkins and CI/CD more would've lead to a better outcome for this project. I only managed to get the application worked on the last day. The majority of that time was spent on figuring out how I could put a basic Hello World Flask application and continually deploy it to a Cloud infrastructure. Hence the name of the repo.
+
