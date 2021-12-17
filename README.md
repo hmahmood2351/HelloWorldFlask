@@ -61,12 +61,14 @@ The place where the CI/CD process happens. From start to finish, these are the s
 **Deploying to DockerHub** - I then want that container available to be pulled from everywhere, so my Docker-Compose file uses a remote image in order to build.
 **Reinitialising Docker Swarm setup.** - After pulling the latest image on the Docker Swarm Manager node, I want the application to be run or updated through Docker Stack deploy.
 
-A technical description of how the pipeline works.
-    A report on the success and code coverage of your unit tests.
-    Any future improvements you would make.
+Pipeline diagram:
+![image](https://user-images.githubusercontent.com/44241991/146505260-a650ed3c-5710-4013-9ca4-ffaefbf03cfb.png)
+
+Infrastructure Diagram:
+
+Component-level Diagram:
+
+ERD Diagram: appdb database
 
 
-    Entity Relationship Diagram (ERD).
-    A full CI/CD pipeline diagram.
-    An infrastructure diagram, illustrating the cloud resources and how they network together.
-    A component-level diagram, illustrating how the application interfaces with the database.
+**Issues and Future Improvements**
